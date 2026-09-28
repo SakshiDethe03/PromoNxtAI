@@ -1,0 +1,14 @@
+{
+  "business_id": "biz_101",
+  "name": "Sharma Bakery & Sweets",
+  "business_type": "bakery",
+  "city": "Nagpur",
+  "languages": [
+    "en",
+    "hi",
+    "mr"
+  ],
+  "brand_voice": "Warm, friendly, local",
+  "instagram_handle": "@sharmabakery",
+  "description": "Neighbourhood bakery selling fresh cakes, cookies and festive sweets."
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "campaign_id": "camp_501",
+    "name": "Q4 Product Launch",
+    "status": "Active",
+    "budget": 5000.0,
+    "channels": [
+      "LinkedIn",
+      "Twitter/X",
+      "Email"
+    ],
+    "target_metrics": {
+      "impressions": 100000,
+      "conversions": 500
+    }
+  }
+]

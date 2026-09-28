@@ -1,0 +1,32 @@
+[
+  {
+    "product_id": "prod_001",
+    "name": "Chocolate Truffle Cake (500g)",
+    "category": "Cakes",
+    "price": 450.0,
+    "currency": "INR",
+    "stock_qty": 12,
+    "is_seasonal": false,
+    "image_url": "https://example.com/truffle.jpg"
+  },
+  {
+    "product_id": "prod_002",
+    "name": "Whole Wheat Cookies (250g)",
+    "category": "Cookies",
+    "price": 120.0,
+    "currency": "INR",
+    "stock_qty": 60,
+    "is_seasonal": false,
+    "image_url": "https://example.com/cookies.jpg"
+  },
+  {
+    "product_id": "prod_003",
+    "name": "Kaju Katli Box (250g)",
+    "category": "Festive Sweets",
+    "price": 380.0,
+    "currency": "INR",
+    "stock_qty": 0,
+    "is_seasonal": true,
+    "image_url": "https://example.com/kaju.jpg"
+  }
+]

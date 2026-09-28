@@ -1,0 +1,18 @@
+[
+  {
+    "offer_id": "off_01",
+    "product_id": "prod_001",
+    "discount_percent": 15.0,
+    "valid_from": "2026-09-20",
+    "valid_to": "2026-10-10",
+    "active": true
+  },
+  {
+    "offer_id": "off_02",
+    "product_id": "prod_002",
+    "discount_percent": 20.0,
+    "valid_from": "2026-09-01",
+    "valid_to": "2026-09-15",
+    "active": false
+  }
+]
