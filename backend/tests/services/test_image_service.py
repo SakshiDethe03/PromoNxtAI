@@ -1,5 +1,6 @@
 import sys
 from pathlib import Path
+from unittest.mock import MagicMock, patch
 import pytest
 
 backend_dir = Path(__file__).resolve().parent.parent.parent
@@ -59,3 +60,39 @@ def test_generate_poster_image_mock(sample_product_and_business):
 
     url = generate_poster_image(product, business)
     assert url == product.image_url
+
+
+@patch("app.services.image_service.create_client")
+@patch("requests.post")
+def test_generate_poster_image_openrouter_call(mock_post, mock_supabase, sample_product_and_business):
+    product, business = sample_product_and_business
+    settings.image_mock = False
+    settings.use_sample_data = False
+
+    mock_img_resp = MagicMock()
+    mock_img_resp.status_code = 200
+    mock_img_resp.json.return_value = {
+        "data": [{"url": "https://openrouter.ai/generated_image.png"}]
+    }
+    mock_bytes_resp = MagicMock()
+    mock_bytes_resp.status_code = 200
+    mock_bytes_resp.content = b"fake_image_bytes"
+
+    mock_post.side_effect = [mock_img_resp, mock_bytes_resp]
+
+    mock_storage = MagicMock()
+    mock_storage.get_public_url.return_value = "https://supabase.co/public_poster.png"
+    mock_supabase_client = MagicMock()
+    mock_supabase_client.storage.from_.return_value = mock_storage
+    mock_supabase.return_value = mock_supabase_client
+
+    url = generate_poster_image(product, business)
+
+    assert url == "https://supabase.co/public_poster.png"
+    first_call = mock_post.call_args_list[0]
+    assert first_call[0][0] == "https://openrouter.ai/api/v1/images"
+    assert first_call[1]["headers"]["Authorization"] == f"Bearer {settings.openrouter_api_key}"
+    payload = first_call[1]["json"]
+    assert payload["modalities"] == ["image"]
+    assert payload["aspect_ratio"] == "1:1"
+    assert payload["output_format"] == "jpeg"

@@ -1,0 +1,18 @@
+You are an expert retail AI strategist.
+Analyze the following sales summary and available product details for today ({today}).
+Goal: {goal}
+
+Sales Summary:
+{sales_summary_json}
+
+Available Products:
+{products_json}
+
+Available Offers:
+{offers_json}
+
+Your task:
+1. Select the best product_id for this marketing campaign.
+2. Provide a clear reasoning string for your choice.
+3. Classify the campaign strategy as one of: "clear_overstock", "boost_bestseller", "seasonal", or "reward_repeat".
+4. If an active valid offer exists in the provided offers list for this product, suggest its offer_id. If no valid offer exists in the provided offers list, offer_id MUST be null.

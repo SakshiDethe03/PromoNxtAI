@@ -1,0 +1,11 @@
+[
+  {
+    "campaign_id": "camp_test_999",
+    "timestamp": "2026-09-29T18:05:28.325437",
+    "event": "test_node_executed",
+    "detail": {
+      "status": "success",
+      "attempt": 1
+    }
+  }
+]
