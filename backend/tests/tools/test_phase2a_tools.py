@@ -1,4 +1,5 @@
 import json
+import sys
 from datetime import date
 from pathlib import Path
 import pytest
@@ -31,6 +32,7 @@ def sample_data():
 
 
 # --- SCHEMA HARDENING TESTS ---
+
 
 def test_generated_content_cta_no_digits():
     # Valid: no digits in caption_template or cta
@@ -76,10 +78,13 @@ def test_offer_valid_dates_validation():
             valid_to=date(2026, 10, 10),
             active=True,
         )
-    assert "valid_from" in str(exc_info.value) and "must be <= valid_to" in str(exc_info.value)
+    assert "valid_from" in str(exc_info.value) and "must be <= valid_to" in str(
+        exc_info.value
+    )
 
 
 # --- TOOL 1: SALES ANALYSIS TESTS ---
+
 
 def test_sales_analysis_tool(sample_data):
     business, products, offers, sales = sample_data
@@ -96,6 +101,7 @@ def test_sales_analysis_tool(sample_data):
 
 
 # --- TOOL 2: FACT SHEET TESTS ---
+
 
 def test_fact_sheet_tool_valid_offer(sample_data):
     business, products, offers, sales = sample_data
@@ -119,6 +125,7 @@ def test_fact_sheet_out_of_stock_raises_error(sample_data):
 
 # --- TOOL 3: CAPTION RENDERER TESTS ---
 
+
 def test_caption_renderer_success(sample_data):
     business, products, offers, sales = sample_data
     prod1 = next(p for p in products if p.product_id == "prod_001")
@@ -134,8 +141,12 @@ def test_caption_renderer_success(sample_data):
 
 def test_caption_renderer_missing_placeholder(sample_data):
     business, products, offers, sales = sample_data
-    prod2 = next(p for p in products if p.product_id == "prod_002")  # offer off_02 expired by 2026-09-28
-    fact_sheet = build_fact_sheet(business, prod2, offers, FIXED_TODAY)  # discount_percent will be None
+    prod2 = next(
+        p for p in products if p.product_id == "prod_002"
+    )  # offer off_02 expired by 2026-09-28
+    fact_sheet = build_fact_sheet(
+        business, prod2, offers, FIXED_TODAY
+    )  # discount_percent will be None
     template = "Get special price at {offer_price}!"
 
     with pytest.raises(ValueError) as exc_info:
@@ -144,6 +155,7 @@ def test_caption_renderer_missing_placeholder(sample_data):
 
 
 # --- TOOL 4: VALIDATION TESTS FOR REQUIRED SCENARIOS ---
+
 
 def test_validate_caption_correct_passes(sample_data):
     business, products, offers, sales = sample_data
@@ -165,7 +177,9 @@ def test_validate_caption_wrong_price(sample_data):
 
     res = validate_caption(caption, fact_sheet, FIXED_TODAY)
     assert res.passed is False
-    assert any("PRICE_MISMATCH" in issue or "UNKNOWN_NUMBER" in issue for issue in res.issues)
+    assert any(
+        "PRICE_MISMATCH" in issue or "UNKNOWN_NUMBER" in issue for issue in res.issues
+    )
 
 
 def test_validate_caption_invented_discount(sample_data):
