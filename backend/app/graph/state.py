@@ -1,3 +1,4 @@
+from datetime import date
 from typing import Any, Dict, List, Literal, Optional, Union
 from typing_extensions import TypedDict
 
@@ -15,6 +16,7 @@ CampaignStatus = Literal[
     "validated",
     "awaiting_approval",
     "approved",
+    "rejected",
     "publishing",
     "published",
     "failed",
@@ -28,6 +30,7 @@ class CampaignState(TypedDict, total=False):
     input: Union[str, Dict[str, Any]]
     language: str
     goal: str
+    today: Optional[Union[date, str]]
     sales_summary: Optional[SalesSummary]
     decision: Optional[DecisionResult]
     fact_sheet: Optional[FactSheet]

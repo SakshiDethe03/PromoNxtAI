@@ -7,5 +7,50 @@
       "status": "success",
       "attempt": 1
     }
+  },
+  {
+    "campaign_id": "camp_test_999",
+    "timestamp": "2026-09-29T18:43:44.156905",
+    "event": "test_node_executed",
+    "detail": {
+      "status": "success",
+      "attempt": 1
+    }
+  },
+  {
+    "campaign_id": "camp_test_999",
+    "timestamp": "2026-09-29T18:52:55.214471",
+    "event": "test_node_executed",
+    "detail": {
+      "status": "success",
+      "attempt": 1
+    }
+  },
+  {
+    "campaign_id": "camp_test_999",
+    "timestamp": "2026-09-29T18:54:16.035628",
+    "event": "test_node_executed",
+    "detail": {
+      "status": "success",
+      "attempt": 1
+    }
+  },
+  {
+    "campaign_id": "camp_test_999",
+    "timestamp": "2026-09-29T18:55:08.163525",
+    "event": "test_node_executed",
+    "detail": {
+      "status": "success",
+      "attempt": 1
+    }
+  },
+  {
+    "campaign_id": "camp_test_999",
+    "timestamp": "2026-09-29T19:01:08.959967",
+    "event": "test_node_executed",
+    "detail": {
+      "status": "success",
+      "attempt": 1
+    }
   }
 ]

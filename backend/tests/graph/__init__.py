@@ -1,1 +1,1 @@
-"""Tests graph package."""
+# Graph test package
