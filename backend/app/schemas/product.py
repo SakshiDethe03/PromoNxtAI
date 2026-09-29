@@ -1,6 +1,6 @@
 from datetime import date
 from typing import Optional, Union
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 
 class Offer(BaseModel):
@@ -11,6 +11,12 @@ class Offer(BaseModel):
     valid_from: date
     valid_to: date
     active: bool = True
+
+    @model_validator(mode="after")
+    def validate_dates(self) -> "Offer":
+        if self.valid_from > self.valid_to:
+            raise ValueError(f"valid_from ({self.valid_from}) must be <= valid_to ({self.valid_to})")
+        return self
 
     def is_valid_on(self, today: Union[date, str]) -> bool:
         """Check if offer is active and valid on a given date."""

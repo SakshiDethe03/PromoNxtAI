@@ -46,5 +46,10 @@
   {"order_id": "ord_045", "date": "2026-09-28", "customer_id": "cus_02", "product_id": "prod_001", "quantity": 1, "unit_price": 450.0},
   {"order_id": "ord_046", "date": "2026-09-28", "customer_id": "cus_25", "product_id": "prod_002", "quantity": 1, "unit_price": 120.0},
   {"order_id": "ord_047", "date": "2026-09-28", "customer_id": "cus_04", "product_id": "prod_001", "quantity": 1, "unit_price": 450.0},
-  {"order_id": "ord_048", "date": "2026-09-28", "customer_id": "cus_26", "product_id": "prod_001", "quantity": 2, "unit_price": 450.0}
+  {"order_id": "ord_048", "date": "2026-09-28", "customer_id": "cus_26", "product_id": "prod_001", "quantity": 2, "unit_price": 450.0},
+  {"order_id": "ord_049", "date": "2026-09-10", "customer_id": "cus_05", "product_id": "prod_004", "quantity": 2, "unit_price": 350.0},
+  {"order_id": "ord_050", "date": "2026-09-15", "customer_id": "cus_06", "product_id": "prod_004", "quantity": 1, "unit_price": 350.0},
+  {"order_id": "ord_051", "date": "2026-09-20", "customer_id": "cus_05", "product_id": "prod_004", "quantity": 3, "unit_price": 350.0},
+  {"order_id": "ord_052", "date": "2026-09-25", "customer_id": "cus_27", "product_id": "prod_004", "quantity": 1, "unit_price": 350.0},
+  {"order_id": "ord_053", "date": "2026-09-28", "customer_id": "cus_28", "product_id": "prod_004", "quantity": 2, "unit_price": 350.0}
 ]

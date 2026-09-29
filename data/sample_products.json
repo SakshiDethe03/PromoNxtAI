@@ -28,5 +28,15 @@
     "stock_qty": 0,
     "is_seasonal": true,
     "image_url": "https://example.com/kaju.jpg"
+  },
+  {
+    "product_id": "prod_004",
+    "name": "Festive Laddoo Box (500g)",
+    "category": "Festive Sweets",
+    "price": 350.0,
+    "currency": "INR",
+    "stock_qty": 45,
+    "is_seasonal": true,
+    "image_url": "https://example.com/laddoo.jpg"
   }
 ]

@@ -1,6 +1,9 @@
 import re
+import string
 from typing import List, Literal, Optional
 from pydantic import BaseModel, Field, field_validator
+
+ALLOWED_PLACEHOLDERS = {"price", "offer_price", "discount", "valid_to"}
 
 
 class DecisionResult(BaseModel):
@@ -19,13 +22,26 @@ class GeneratedContent(BaseModel):
     hashtags: List[str] = Field(default_factory=list)
     creative_brief: str
 
-    @field_validator("caption_template")
+    @field_validator("caption_template", "cta")
     @classmethod
-    def check_no_digits_in_template(cls, v: str) -> str:
+    def check_no_digits(cls, v: str) -> str:
         if re.search(r"\d", v):
             raise ValueError(
                 "caption_template must not contain raw digits; use placeholders like {price}, {offer_price}, {discount}, {valid_to}"
             )
+        return v
+
+    @field_validator("caption_template", "cta")
+    @classmethod
+    def check_placeholders(cls, v: str) -> str:
+        formatter = string.Formatter()
+        for _, field_name, _, _ in formatter.parse(v):
+            if field_name is not None:
+                clean_field = field_name.split("!")[0].split(":")[0].strip()
+                if clean_field not in ALLOWED_PLACEHOLDERS:
+                    raise ValueError(
+                        f"Invalid placeholder '{{{clean_field}}}'; allowed placeholders are: {', '.join(sorted(ALLOWED_PLACEHOLDERS))}"
+                    )
         return v
 
 

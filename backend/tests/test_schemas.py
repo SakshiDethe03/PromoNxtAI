@@ -37,7 +37,7 @@ def test_load_all_5_data_files():
     with open(products_file, "r") as f:
         products_data = json.load(f)
     products = [Product(**item) for item in products_data]
-    assert len(products) == 3
+    assert len(products) == 4
     assert any(p.stock_qty == 0 for p in products)
     assert any(p.is_seasonal for p in products)
 
@@ -72,7 +72,7 @@ def test_load_all_5_data_files():
 def test_generated_content_digits_rejection():
     # Valid template with placeholders and NO raw digits
     valid = GeneratedContent(
-        caption_template="Treat yourself to fresh treats! Special offer at {offer_price} {currency}! Valid until {valid_to}.",
+        caption_template="Treat yourself to fresh treats! Special offer at {offer_price} INR! Valid until {valid_to}.",
         cta="Order on WhatsApp now!",
         hashtags=["#NagpurBakery", "#FreshCakes"],
         creative_brief="Delicious cake photo with warm lighting",
