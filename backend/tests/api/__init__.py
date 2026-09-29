@@ -1,1 +1,1 @@
-"""Tests api package."""
+# API tests package

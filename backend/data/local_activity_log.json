@@ -52,5 +52,175 @@
       "status": "success",
       "attempt": 1
     }
+  },
+  {
+    "campaign_id": "448c51bb-fbb9-4711-bc78-d7cbe8d4b043",
+    "timestamp": "2026-09-29T22:09:16.415216",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "9404ccd0-68c4-49b2-8890-f312c964d0be",
+    "timestamp": "2026-09-29T22:09:16.438834",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost sweets",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "56a34ffa-7fd0-4d25-8786-67ef037924f5",
+    "timestamp": "2026-09-29T22:09:16.475343",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "56a34ffa-7fd0-4d25-8786-67ef037924f5",
+    "timestamp": "2026-09-29T22:09:16.484995",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "b36fd3ff-3bf9-4f08-80cb-ee29e2111abe",
+    "timestamp": "2026-09-29T22:09:16.501723",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "b36fd3ff-3bf9-4f08-80cb-ee29e2111abe",
+    "timestamp": "2026-09-29T22:09:16.505231",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "eddc1797-8cd4-45dd-bcc3-d5f3bf321d71",
+    "timestamp": "2026-09-29T22:09:16.526103",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "eddc1797-8cd4-45dd-bcc3-d5f3bf321d71",
+    "timestamp": "2026-09-29T22:09:16.535135",
+    "event": "approval_edit",
+    "detail": {
+      "action": "edit",
+      "status": "failed"
+    }
+  },
+  {
+    "campaign_id": "5a7bb3c5-c79c-4052-ae48-67c256bb2973",
+    "timestamp": "2026-09-29T22:09:16.554972",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "2804a715-cf93-4604-b5ee-e8ce39071f22",
+    "timestamp": "2026-09-29T22:09:16.589238",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "2804a715-cf93-4604-b5ee-e8ce39071f22",
+    "timestamp": "2026-09-29T22:09:16.598504",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "ef788697-bde5-49ce-9757-fda5d0e3baf1",
+    "timestamp": "2026-09-29T22:09:16.618396",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "ef788697-bde5-49ce-9757-fda5d0e3baf1",
+    "timestamp": "2026-09-29T22:09:16.625033",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "ef788697-bde5-49ce-9757-fda5d0e3baf1",
+    "timestamp": "2026-09-29T22:09:16.628734",
+    "event": "publish_failed",
+    "detail": {
+      "error": "Network error sending to n8n"
+    }
+  },
+  {
+    "campaign_id": "f4e655b9-92be-4738-832d-913e7cafbf7f",
+    "timestamp": "2026-09-29T22:09:16.655043",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "f4e655b9-92be-4738-832d-913e7cafbf7f",
+    "timestamp": "2026-09-29T22:09:16.660090",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "f4e655b9-92be-4738-832d-913e7cafbf7f",
+    "timestamp": "2026-09-29T22:09:16.668010",
+    "event": "published",
+    "detail": {
+      "instagram_post_id": "ig_post_999",
+      "permalink": "https://instagram.com/p/test1234"
+    }
+  },
+  {
+    "campaign_id": "7d8531e6-70fd-4f21-8c91-9822b184a3cd",
+    "timestamp": "2026-09-29T22:09:16.686430",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "camp_test_999",
+    "timestamp": "2026-09-29T22:09:16.816057",
+    "event": "test_node_executed",
+    "detail": {
+      "status": "success",
+      "attempt": 1
+    }
   }
 ]

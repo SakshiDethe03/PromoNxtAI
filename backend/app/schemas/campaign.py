@@ -71,6 +71,8 @@ class PublishPayload(BaseModel):
 class PublishCallback(BaseModel):
     """Callback payload received from n8n after publishing attempt."""
     campaign_id: str
-    status: Literal["success", "failed"]
+    status: Literal["published", "success", "failed"]
+    instagram_post_id: Optional[str] = None
+    permalink: Optional[str] = None
     post_url: Optional[str] = None
     error: Optional[str] = None

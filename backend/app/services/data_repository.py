@@ -43,7 +43,9 @@ def get_business(business_id: str) -> BusinessProfile:
         data = _read_json_file(SAMPLE_DATA_DIR / "sample_business.json")
         if data:
             profile = BusinessProfile(**data)
-            return profile
+            if profile.business_id == business_id:
+                return profile
+            raise ValueError(f"Business profile '{business_id}' not found in sample data")
         raise ValueError(f"Sample business profile not found in {SAMPLE_DATA_DIR}")
 
     client = get_client()
