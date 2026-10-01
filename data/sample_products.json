@@ -7,7 +7,7 @@
     "currency": "INR",
     "stock_qty": 12,
     "is_seasonal": false,
-    "image_url": "https://example.com/truffle.jpg"
+    "image_url": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop"
   },
   {
     "product_id": "prod_002",
@@ -17,7 +17,7 @@
     "currency": "INR",
     "stock_qty": 60,
     "is_seasonal": false,
-    "image_url": "https://example.com/cookies.jpg"
+    "image_url": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=800&auto=format&fit=crop"
   },
   {
     "product_id": "prod_003",
@@ -27,7 +27,7 @@
     "currency": "INR",
     "stock_qty": 0,
     "is_seasonal": true,
-    "image_url": "https://example.com/kaju.jpg"
+    "image_url": "https://images.unsplash.com/photo-1599785209707-a456fc1337bb?w=800&auto=format&fit=crop"
   },
   {
     "product_id": "prod_004",
@@ -37,6 +37,6 @@
     "currency": "INR",
     "stock_qty": 45,
     "is_seasonal": true,
-    "image_url": "https://example.com/laddoo.jpg"
+    "image_url": "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=800&auto=format&fit=crop"
   }
 ]

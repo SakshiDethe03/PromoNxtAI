@@ -191,3 +191,25 @@ def test_n8n_callback_not_in_publishing_status_conflict():
         json={"campaign_id": cid, "status": "published"},
     )
     assert cb_res.status_code == 409
+
+
+def test_campaign_activity_log_full_flow():
+    res = client.post("/campaigns", json={"business_id": "biz_101", "goal": "Boost cake sales"})
+    cid = res.json()["campaign_id"]
+
+    client.post(f"/campaigns/{cid}/approve", json={"action": "approve"})
+    client.post(f"/campaigns/{cid}/publish")
+
+    client.post(
+        "/n8n/callback",
+        headers={"X-Webhook-Secret": settings.n8n_shared_secret},
+        json={"campaign_id": cid, "status": "published", "instagram_post_id": "ig_123"},
+    )
+
+    act_res = client.get(f"/campaigns/{cid}/activity")
+    assert act_res.status_code == 200
+    events = [item["event"] for item in act_res.json()]
+    assert "campaign_started" in events
+    assert "approval_approve" in events
+    assert "published" in events
+    assert events.index("campaign_started") < events.index("approval_approve") < events.index("published")

@@ -129,13 +129,18 @@ def content_node(state: CampaignState) -> Dict[str, Any]:
     else:
         enhanced_goal = goal
 
-    generated_content = generate_content(fact_sheet, business, language, enhanced_goal)
-    rendered_caption = render_caption(generated_content.caption_template, fact_sheet)
-
-    return {
-        "content": generated_content,
-        "final_caption": rendered_caption,
-    }
+    try:
+        generated_content = generate_content(fact_sheet, business, language, enhanced_goal)
+        rendered_caption = render_caption(generated_content.caption_template, fact_sheet)
+        return {
+            "content": generated_content,
+            "final_caption": rendered_caption,
+        }
+    except ValueError as e:
+        logger.error(f"content node failed: {e}")
+        errors = list(state.get("errors") or [])
+        errors.append(f"content generation failed: {e}")
+        return {"status": "failed", "errors": errors}
 
 
 def validate_node(state: CampaignState) -> Dict[str, Any]:
@@ -193,12 +198,25 @@ def generate_image_node(state: CampaignState) -> Dict[str, Any]:
     products = data_repository.get_products(business_id)
 
     target_product = next((p for p in products if p.product_id == decision_res.product_id), products[0])
-    image_url = generate_poster_image(target_product, business)
-
-    return {
-        "image_url": image_url,
-        "status": "awaiting_approval",
-    }
+    try:
+        image_url, image_is_generated = generate_poster_image(target_product, business)
+        return {
+            "image_url": image_url,
+            "image_is_generated": image_is_generated,
+            "status": "awaiting_approval",
+        }
+    except Exception as e:
+        status_code = getattr(getattr(e, "response", None), "status_code", "402/Config")
+        logger.warning(
+            f"Image generation failed ({status_code}): {e}. "
+            f"Falling back to product.image_url — this is a STOCK PHOTO, not an AI-generated image."
+        )
+        fallback_url = target_product.image_url or "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=800&auto=format&fit=crop"
+        return {
+            "image_url": fallback_url,
+            "image_is_generated": False,
+            "status": "awaiting_approval",
+        }
 
 
 def human_approval_node(state: CampaignState) -> Dict[str, Any]:

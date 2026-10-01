@@ -20,6 +20,7 @@ def health_check():
         "use_sample_data": settings.use_sample_data,
         "image_mock": settings.image_mock,
         "n8n_mock": settings.n8n_mock,
+        "llm_mock": settings.llm_mock,
     }
 
 

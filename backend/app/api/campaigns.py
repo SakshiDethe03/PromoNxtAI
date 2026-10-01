@@ -57,6 +57,7 @@ def create_campaign(req: CreateCampaignRequest):
                 "preview": {
                     "final_caption": resulting_state.get("final_caption"),
                     "image_url": resulting_state.get("image_url"),
+                    "image_is_generated": resulting_state.get("image_is_generated", False),
                     "validation": (
                         resulting_state.get("validation").model_dump()
                         if hasattr(resulting_state.get("validation"), "model_dump")
@@ -91,11 +92,22 @@ def get_campaign(campaign_id: str):
         "status": campaign_state.get("status"),
         "final_caption": campaign_state.get("final_caption"),
         "image_url": campaign_state.get("image_url"),
+        "image_is_generated": campaign_state.get("image_is_generated", False),
         "validation": validation,
         "validation_attempts": campaign_state.get("validation_attempts"),
         "created_at": campaign_state.get("created_at"),
         "updated_at": campaign_state.get("updated_at"),
     }
+
+
+@router.get("/{campaign_id}/activity")
+def get_campaign_activity(campaign_id: str):
+    campaign_state = data_repository.get_campaign(campaign_id)
+    if not campaign_state:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Campaign not found")
+
+    logs = data_repository.get_activity_log(campaign_id)
+    return logs
 
 
 @router.post("/{campaign_id}/approve")
@@ -130,6 +142,7 @@ def approve_campaign(campaign_id: str, approval: ApprovalDecision):
         "preview": {
             "final_caption": resulting_state.get("final_caption"),
             "image_url": resulting_state.get("image_url"),
+            "image_is_generated": resulting_state.get("image_is_generated", False),
             "validation": validation,
         },
         "errors": resulting_state.get("errors", []),

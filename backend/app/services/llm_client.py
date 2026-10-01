@@ -21,7 +21,7 @@ def _build_default_mock(response_model: Type[T]) -> T:
         )  # type: ignore
     elif response_model == GeneratedContent:
         return GeneratedContent(
-            caption_template="Treat yourself to fresh treats! Special offer at {offer_price} INR!",
+            caption_template="Treat yourself to fresh treats! Special offer at {price} INR!",
             cta="Order on WhatsApp now",
             hashtags=["#FreshCakes"],
             creative_brief="Cake photo",
@@ -69,6 +69,7 @@ def get_chat_completion(
         model=settings.openrouter_text_model,
         messages=messages,
         response_format=response_model,
+        max_tokens=1024,
     )
 
     parsed = completion.choices[0].message.parsed

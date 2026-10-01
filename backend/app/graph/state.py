@@ -37,6 +37,7 @@ class CampaignState(TypedDict, total=False):
     content: Optional[GeneratedContent]
     final_caption: Optional[str]
     image_url: Optional[str]
+    image_is_generated: Optional[bool]
     validation: Optional[ValidationResult]
     validation_attempts: int
     approval: Optional[ApprovalDecision]

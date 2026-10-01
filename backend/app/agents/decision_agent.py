@@ -8,6 +8,8 @@ from app.prompts import load_prompt
 from app.schemas.business import SalesSummary
 from app.schemas.campaign import DecisionResult
 from app.schemas.product import Offer, Product
+from app.services.llm_client import get_chat_completion
+
 
 logger = logging.getLogger(__name__)
 
@@ -82,38 +84,18 @@ def decide_product(
 
     def _call_llm(current_prompt: str) -> DecisionResult:
         nonlocal mock_index
-        env_llm_mock = settings.llm_mock
-
-        if llm_mock_responses is not None:
-            res = llm_mock_responses[min(mock_index, len(llm_mock_responses) - 1)]
-            mock_index += 1
-            return res
-
-        if env_llm_mock:
-            default_offer = offers_data[0]["offer_id"] if offers_data else None
-            return DecisionResult(
-                product_id=products[0].product_id if products else "prod_001",
-                reason="Default mock LLM selected top product",
-                strategy="boost_bestseller",
-                offer_id=default_offer,
-            )
-
-        # pyrefly: ignore [missing-import]
-        from langchain_openrouter import ChatOpenRouter
-
-        client = ChatOpenRouter(api_key=settings.openrouter_api_key)
-        completion = client.beta.chat.completions.parse(
-            model=settings.openai_text_model,
-            messages=[
-                {
-                    "role": "system",
-                    "content": "You are a retail marketing AI strategist.",
-                },
-                {"role": "user", "content": current_prompt},
-            ],
-            response_format=DecisionResult,
+        idx = mock_index
+        mock_index += 1
+        messages = [
+            {"role": "system", "content": "You are a retail marketing AI strategist."},
+            {"role": "user", "content": current_prompt},
+        ]
+        return get_chat_completion(
+            messages=messages,
+            response_model=DecisionResult,
+            mock_responses=llm_mock_responses,
+            mock_index=idx,
         )
-        return completion.choices[0].message.parsed
 
     decision = _call_llm(prompt)
     error_msg = _validate_decision_result(decision, products, offers)

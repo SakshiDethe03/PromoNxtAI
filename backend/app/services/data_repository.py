@@ -156,3 +156,21 @@ def append_activity_log(campaign_id: str, event: str, detail: dict) -> None:
         "event": event,
         "detail": detail,
     }).execute()
+
+
+def get_activity_log(campaign_id: str) -> List[dict]:
+    """Retrieves ordered list of activity log entries for a campaign."""
+    if settings.use_sample_data:
+        logs_list = _read_json_file(LOCAL_ACTIVITY_LOG_FILE) or []
+        filtered = [item for item in logs_list if item.get("campaign_id") == campaign_id]
+        return filtered
+
+    client = get_client()
+    response = (
+        client.table("activity_logs")
+        .select("*")
+        .eq("campaign_id", campaign_id)
+        .order("timestamp", desc=False)
+        .execute()
+    )
+    return response.data or []

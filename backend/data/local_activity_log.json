@@ -222,5 +222,516 @@
       "status": "success",
       "attempt": 1
     }
+  },
+  {
+    "campaign_id": "dd1fed98-9ba6-4add-9797-5549a86842e3",
+    "timestamp": "2026-09-29T22:21:03.570912",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "clear excess stock",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "dd1fed98-9ba6-4add-9797-5549a86842e3",
+    "timestamp": "2026-09-29T22:25:06.639674",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "8ddc2666-ba56-4497-a136-d22670418ece",
+    "timestamp": "2026-09-29T22:33:27.304513",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "clear excess stock",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "5f1b6997-00e1-4825-87a1-619af7313388",
+    "timestamp": "2026-09-29T22:34:22.694634",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "clear excess stock",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "5f1b6997-00e1-4825-87a1-619af7313388",
+    "timestamp": "2026-09-29T22:34:24.319844",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "5f1b6997-00e1-4825-87a1-619af7313388",
+    "timestamp": "2026-09-29T22:34:24.327465",
+    "event": "published",
+    "detail": {
+      "instagram_post_id": "ig_live_smoke_98765",
+      "permalink": "https://www.instagram.com/p/smoke_test_98765/"
+    }
+  },
+  {
+    "campaign_id": "6a21fd04-93ab-4f46-b065-754320ffbcdf",
+    "timestamp": "2026-09-29T22:48:34.724114",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "ef87c229-891a-49c9-8796-20c75263b476",
+    "timestamp": "2026-09-29T22:48:34.760837",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost sweets",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "fd11c241-97e4-4cdc-a13d-ccce90c15ca2",
+    "timestamp": "2026-09-29T22:48:34.803908",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "fd11c241-97e4-4cdc-a13d-ccce90c15ca2",
+    "timestamp": "2026-09-29T22:48:34.822313",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "42b8a43e-a0db-44f2-88af-490ca790daa6",
+    "timestamp": "2026-09-29T22:48:34.852214",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "42b8a43e-a0db-44f2-88af-490ca790daa6",
+    "timestamp": "2026-09-29T22:48:34.860807",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "d0c6134e-fc55-4b59-bfda-430e176e1313",
+    "timestamp": "2026-09-29T22:48:34.892282",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "d0c6134e-fc55-4b59-bfda-430e176e1313",
+    "timestamp": "2026-09-29T22:48:34.904143",
+    "event": "approval_edit",
+    "detail": {
+      "action": "edit",
+      "status": "failed"
+    }
+  },
+  {
+    "campaign_id": "4efbca34-5b2c-4485-af66-bde8584ad5c0",
+    "timestamp": "2026-09-29T22:48:34.939906",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "543fb605-b6b1-43cd-bf5c-acd2c655a596",
+    "timestamp": "2026-09-29T22:48:34.977441",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "543fb605-b6b1-43cd-bf5c-acd2c655a596",
+    "timestamp": "2026-09-29T22:48:34.984172",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "1124b11d-4a2d-406b-badc-1c32752cb833",
+    "timestamp": "2026-09-29T22:48:35.024051",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "1124b11d-4a2d-406b-badc-1c32752cb833",
+    "timestamp": "2026-09-29T22:48:35.033978",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "1124b11d-4a2d-406b-badc-1c32752cb833",
+    "timestamp": "2026-09-29T22:48:35.043785",
+    "event": "publish_failed",
+    "detail": {
+      "error": "Network error sending to n8n"
+    }
+  },
+  {
+    "campaign_id": "bd2159fd-a299-406a-af27-a23643e280e7",
+    "timestamp": "2026-09-29T22:48:35.084301",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "bd2159fd-a299-406a-af27-a23643e280e7",
+    "timestamp": "2026-09-29T22:48:35.094028",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "bd2159fd-a299-406a-af27-a23643e280e7",
+    "timestamp": "2026-09-29T22:48:35.115610",
+    "event": "published",
+    "detail": {
+      "instagram_post_id": "ig_post_999",
+      "permalink": "https://instagram.com/p/test1234"
+    }
+  },
+  {
+    "campaign_id": "975a5d28-6b3a-412b-9a32-3e8f58388ba4",
+    "timestamp": "2026-09-29T22:48:35.164093",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "6fed8c67-7357-4770-a256-1071362e11f5",
+    "timestamp": "2026-09-29T22:48:35.212738",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "6fed8c67-7357-4770-a256-1071362e11f5",
+    "timestamp": "2026-09-29T22:48:35.224678",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "6fed8c67-7357-4770-a256-1071362e11f5",
+    "timestamp": "2026-09-29T22:48:35.237945",
+    "event": "published",
+    "detail": {
+      "instagram_post_id": "ig_123",
+      "permalink": null
+    }
+  },
+  {
+    "campaign_id": "camp_test_999",
+    "timestamp": "2026-09-29T22:48:35.441970",
+    "event": "test_node_executed",
+    "detail": {
+      "status": "success",
+      "attempt": 1
+    }
+  },
+  {
+    "campaign_id": "2821252a-6954-4068-96b6-b1e04c0c097f",
+    "timestamp": "2026-09-29T22:57:39.576874",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "clear excess stock",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "02aed53b-c474-428d-aa62-6b6bb3acab10",
+    "timestamp": "2026-10-01T09:19:46.186555",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "clear excess stock",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "5013ea90-7a4d-46c2-8d84-a2ca6798906b",
+    "timestamp": "2026-10-01T09:20:33.737824",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "clear excess stock",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "360c87ba-ece3-412e-9d2f-25c505fdb24a",
+    "timestamp": "2026-10-01T09:20:58.898718",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "clear excess stock",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "763302ea-11df-403d-846c-f3733a34cbe3",
+    "timestamp": "2026-10-01T09:21:44.048720",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "clear excess stock",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "763302ea-11df-403d-846c-f3733a34cbe3",
+    "timestamp": "2026-10-01T09:21:44.906671",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "763302ea-11df-403d-846c-f3733a34cbe3",
+    "timestamp": "2026-10-01T09:21:44.916919",
+    "event": "published",
+    "detail": {
+      "instagram_post_id": "ig_live_smoke_98765",
+      "permalink": "https://www.instagram.com/p/smoke_test_98765/"
+    }
+  },
+  {
+    "campaign_id": "2cb77074-fe01-4ce9-bbb5-41a3aa531237",
+    "timestamp": "2026-10-01T09:31:39.294745",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "53db968e-b97f-42f1-868f-a4c4a0082a73",
+    "timestamp": "2026-10-01T09:31:39.312357",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost sweets",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "11b2c4e5-4895-4a48-94bf-1ec429d67b63",
+    "timestamp": "2026-10-01T09:31:39.342789",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "11b2c4e5-4895-4a48-94bf-1ec429d67b63",
+    "timestamp": "2026-10-01T09:31:39.346032",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "c732afab-4bf9-495d-a12a-7a8f97fbb452",
+    "timestamp": "2026-10-01T09:31:39.371595",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "c732afab-4bf9-495d-a12a-7a8f97fbb452",
+    "timestamp": "2026-10-01T09:31:39.378411",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "ffefe733-dd31-4fbf-8e3c-63c1e819db88",
+    "timestamp": "2026-10-01T09:31:39.395999",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "ffefe733-dd31-4fbf-8e3c-63c1e819db88",
+    "timestamp": "2026-10-01T09:31:39.395999",
+    "event": "approval_edit",
+    "detail": {
+      "action": "edit",
+      "status": "failed"
+    }
+  },
+  {
+    "campaign_id": "1690e70b-91a1-4116-89a2-be29cc48d6ea",
+    "timestamp": "2026-10-01T09:31:39.426311",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "868559ea-3737-419d-b6b2-d3b6c000e97d",
+    "timestamp": "2026-10-01T09:31:39.446471",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "868559ea-3737-419d-b6b2-d3b6c000e97d",
+    "timestamp": "2026-10-01T09:31:39.456667",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "6550021c-5d7d-405b-873c-46bb6c335cbb",
+    "timestamp": "2026-10-01T09:31:39.478143",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "6550021c-5d7d-405b-873c-46bb6c335cbb",
+    "timestamp": "2026-10-01T09:31:39.487466",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "6550021c-5d7d-405b-873c-46bb6c335cbb",
+    "timestamp": "2026-10-01T09:31:39.492755",
+    "event": "publish_failed",
+    "detail": {
+      "error": "Network error sending to n8n"
+    }
+  },
+  {
+    "campaign_id": "669e70a0-2668-475e-8e64-f9bd15e36a7a",
+    "timestamp": "2026-10-01T09:31:39.515344",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "669e70a0-2668-475e-8e64-f9bd15e36a7a",
+    "timestamp": "2026-10-01T09:31:39.526149",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "669e70a0-2668-475e-8e64-f9bd15e36a7a",
+    "timestamp": "2026-10-01T09:31:39.528188",
+    "event": "published",
+    "detail": {
+      "instagram_post_id": "ig_post_999",
+      "permalink": "https://instagram.com/p/test1234"
+    }
+  },
+  {
+    "campaign_id": "8104cb0e-7159-4d7b-8ef2-9eab0e62de0f",
+    "timestamp": "2026-10-01T09:31:39.544709",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "8e6a33f5-3b7d-412d-bc6e-87d83d445424",
+    "timestamp": "2026-10-01T09:31:39.573080",
+    "event": "campaign_started",
+    "detail": {
+      "goal": "Boost cake sales",
+      "business_id": "biz_101"
+    }
+  },
+  {
+    "campaign_id": "8e6a33f5-3b7d-412d-bc6e-87d83d445424",
+    "timestamp": "2026-10-01T09:31:39.578158",
+    "event": "approval_approve",
+    "detail": {
+      "action": "approve",
+      "status": "approved"
+    }
+  },
+  {
+    "campaign_id": "8e6a33f5-3b7d-412d-bc6e-87d83d445424",
+    "timestamp": "2026-10-01T09:31:39.588770",
+    "event": "published",
+    "detail": {
+      "instagram_post_id": "ig_123",
+      "permalink": null
+    }
+  },
+  {
+    "campaign_id": "camp_test_999",
+    "timestamp": "2026-10-01T09:31:39.696173",
+    "event": "test_node_executed",
+    "detail": {
+      "status": "success",
+      "attempt": 1
+    }
   }
 ]
